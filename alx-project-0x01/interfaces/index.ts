@@ -1,9 +1,12 @@
+/* Types for: 2. Implement Posts Card Components */
 export interface PostProps{
     userId : number;
     id : number;
     title : string;
     body : string
 }
+
+/* Types for: 3. Implement Users Card Components */
 export interface UserProps{
   "id": 1,
   "name": "Leanne Graham",
