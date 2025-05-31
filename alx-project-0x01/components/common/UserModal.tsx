@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { UserModalProps, UserProps } from '@/interfaces';
 
-const defaultUser: UserProps = {
+const UserModal: React.FC<UserModalProps> = ({ onClose, onSubmit }) => {
+  const [user, setUser] = useState<UserProps>({
   id: Date.now(),
   name: '',
   username: '',
@@ -24,9 +25,6 @@ const defaultUser: UserProps = {
     bs: '',
   },
 };
-
-const UserModal: React.FC<UserModalProps> = ({ isOpen, onClose, onSubmit }) => {
-  const [user, setUser] = useState<UserProps>(defaultUser);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
