@@ -26,7 +26,7 @@ export interface UserProps {
         name: string;
         catchPhrase: string;
         bs: string;
-    }
+    };
 }
 
 export interface PostData {
@@ -66,7 +66,6 @@ export interface UserData {
 }
 
 export interface UserModalProps {
-  isOpen: boolean;
   onClose: () => void;
-  onSubmit: (user: UserProps) => void; 
+  onSubmit: (post: UserProps) => void;
 }
