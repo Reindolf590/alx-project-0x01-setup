@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { UserModalProps, UserData } from '../../interfaces';
+import { UserModalProps, UserProps } from '@/interfaces';
 
 const defaultUser: UserProps = {
   id: Date.now(),
