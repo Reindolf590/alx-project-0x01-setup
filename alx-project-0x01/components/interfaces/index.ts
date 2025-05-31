@@ -42,10 +42,12 @@ export interface PostModalProps {
 }
 
 export interface UserData {
-  id: number;
+  id?: number;
   name: string;
   username: string;
   email: string;
+  phone: string;
+  website: string;
   address: {
     street: string;
     suite: string;
@@ -56,8 +58,6 @@ export interface UserData {
       lng: string;
     };
   };
-  phone: string;
-  website: string;
   company: {
     name: string;
     catchPhrase: string;
