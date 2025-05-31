@@ -1,8 +1,7 @@
-// components/common/UserModal.tsx
 import React, { useState } from 'react';
 import { UserModalProps, UserData } from '../../interfaces';
 
-const defaultUser: UserData = {
+const defaultUser: UserProps = {
   id: Date.now(),
   name: '',
   username: '',
@@ -27,7 +26,7 @@ const defaultUser: UserData = {
 };
 
 const UserModal: React.FC<UserModalProps> = ({ isOpen, onClose, onSubmit }) => {
-  const [user, setUser] = useState<UserData>(defaultUser);
+  const [user, setUser] = useState<UserProps>(defaultUser);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
