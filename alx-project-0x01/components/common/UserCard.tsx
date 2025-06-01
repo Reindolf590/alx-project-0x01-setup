@@ -1,7 +1,8 @@
+import React from "react";
 import { UserProps } from "@/interfaces";
 
-const UserCard: React.FC<{user: UserProps}> = ({ user }) => {
-   return (
+const UserCard: React.FC<UserProps> = ({ user }) => {
+  return (
     <div style={styles.card}>
       <h2>{user.name} ({user.username})</h2>
       <p><strong>Email:</strong> {user.email}</p>
