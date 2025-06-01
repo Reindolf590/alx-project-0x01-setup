@@ -10,11 +10,6 @@ interface UsersProps {
 
 const Users: React.FC<UsersProps> = ({ posts }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [users, setUsers] = useState<UserData[]>(posts);
-
-  const handleAddUser = (user: UserData) => {
-    setUsers([...users, { ...user, id: users.length + 1 }]);
-  };
 
   return (
     <div>
@@ -32,11 +27,11 @@ const Users: React.FC<UsersProps> = ({ posts }) => {
         <UserModal
           isOpen={isModalOpen}
           onClose={() => setIsModalOpen(false)}
-          onSubmit={handleAddUser}
+          onSubmit={(newUser: UserData) => {}}
         />
 
         <ul className="space-y-3">
-          {users.map((user) => (
+          {posts.map((user) => (
             <li key={user.id}>
               <UserCard user={user} />
             </li>
