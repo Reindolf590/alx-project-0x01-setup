@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Header from "@/components/layout/Header";
 import UserModal from "@/components/common/UserModal";
+import UserCard from "@/components/common/UserCard";
 import { UserData } from "@/interfaces";
 
 interface UsersProps {
@@ -36,10 +37,8 @@ const Users: React.FC<UsersProps> = ({ posts }) => {
 
         <ul className="space-y-3">
           {users.map((user) => (
-            <li key={user.id} className="border p-4 rounded shadow-sm">
-              <h2 className="text-lg font-semibold">{user.name}</h2>
-              <p>{user.email}</p>
-              <p className="text-sm text-gray-600">{user.company?.name}</p>
+            <li key={user.id}>
+              <UserCard user={user} />
             </li>
           ))}
         </ul>
